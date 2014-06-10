@@ -17,8 +17,6 @@ ENV.update(Pliny::Utils.parse_env("#{root}/.env.test"))
 
 require_relative "../lib/initializer"
 
-DatabaseCleaner.strategy = :transaction
-
 # pull in test initializers
 Pliny::Utils.require_glob("#{Initializer.root}/spec/support/**/*.rb")
 
